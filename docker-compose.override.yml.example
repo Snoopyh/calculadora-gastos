@@ -1,0 +1,18 @@
+# Exemplo de arquivo docker-compose.override.yml
+# Copie este arquivo para docker-compose.override.yml e ajuste conforme necessário
+# Este arquivo é automaticamente carregado pelo Docker Compose
+
+version: '3.8'
+
+services:
+  backend:
+    environment:
+      - JWT_SECRET=your-custom-secret-key
+      - JWT_EXPIRE=7d
+      # Adicione outras variáveis de ambiente aqui
+
+  frontend:
+    environment:
+      - VITE_API_URL=http://localhost:5000/api
+      # Adicione outras variáveis de ambiente aqui
+
