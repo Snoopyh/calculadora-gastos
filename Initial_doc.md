@@ -1,11 +1,8 @@
-# Documentação Calculadora de gastos
+# Sistema de Cálculo de Gastos para Microempreendedores
 
-A Calculadora de gastos é um sistema completo para gestão financeira voltado para microempreendedores, com o objetivo de facilitar o controle de despesas, receitas e geração de relatórios detalhados. 
+Sistema completo para gestão financeira de microempreendedores, permitindo controle de despesas, receitas e geração de relatórios detalhados.
 
-O sistema permitirá que o usuário registre receitas e despesas, classifique por categorias, e acompanhe relatórios automáticos de lucro líquido e margem de lucro para ajudar o microempreendedor a tomar decisões mais assertivas na gestão de seus recursos.A finalidade principal é fornecer uma ferramenta simples, acessível e segura que apoie o microempreendedor no dia a dia, ajudando a organizar as finanças, visualizar resultados de forma clara e planejar o crescimento de forma sustentável.
-
-
-## Tecnologias
+## 🚀 Tecnologias
 
 ### Backend
 - **Node.js** com **Express.js**
@@ -20,48 +17,19 @@ O sistema permitirá que o usuário registre receitas e despesas, classifique po
 - **React Router** para navegação
 - **Axios** para requisições HTTP
 
+## 📋 Funcionalidades
 
-## Arquitetura
-
-### Frontend:
-- React.js com Vite SPA (Single Page Application)
-- Mobile-first PWA (Progressive Web App)
-- TailwindCSS, Chart.js/Recharts
-
-### Backend:
-- Node.js
-- Express
-- MongoDB Atlas
-- JWT
-
-### Infraestrutura:
-- Deploy do Frontend em Vercel
-- Deploy do Backend em Render
-- Banco de dados MongoDb na nuvem (atlas)
-
-
-##  Requisitos
-
-### Requisitos funcionais
-- Cadastro e autenticação de usuários
-- Gestão de despesas (fixas e variáveis)
-- Gestão de receitas
-- Cálculo de lucro líquido mensal
-- Cálculo de margem de lucro
-- Relatórios e gráficos
-- Sugestões automáticas de economia
-- Edição de perfil (nome, CNPJ, ramo de atividade)
-- Dashboard com resumo financeiro
-- Interface responsiva e moderna
-
-### Requisitos não-funcionais:
-- Segurança: autenticação JWT 
-- Usabilidade: design responsivo, dashboards intuitivos
-- Escalabilidade: bancos de dado em nuvem
-- Manutenibilidade: arquitetura em camadas, testes automatizados
-- Conformidade: LGPD (consentimento e exclusão de dados)
-
-
+### ✅ Implementadas
+- ✅ Cadastro e autenticação de usuários
+- ✅ Gestão de despesas (fixas e variáveis)
+- ✅ Gestão de receitas
+- ✅ Cálculo de lucro líquido mensal
+- ✅ Cálculo de margem de lucro
+- ✅ Relatórios e gráficos
+- ✅ Sugestões automáticas de economia
+- ✅ Edição de perfil (nome, CNPJ, ramo de atividade)
+- ✅ Dashboard com resumo financeiro
+- ✅ Interface responsiva e moderna
 
 ## 🛠️ Instalação e Configuração
 
@@ -86,7 +54,7 @@ cd backend
 npm install
 
 # Instalar dependências do frontend
-cd ../frontend/web
+cd ../frontend
 npm install
 ```
 
@@ -95,11 +63,11 @@ npm install
 No diretório `backend`, crie um arquivo `.env`:
 
 ```env
-JWT_EXPIRE=7d
-JWT_SECRET=TESTETESTE
-MONGODB_URI="mongodb+srv://matheusadmin:PWxTqRlARzCOzhv2@gastos-microemp.yyfmknh.mongodb.net/?appName=gastos-microemp"
-NODE_ENV=development
 PORT=5000
+MONGODB_URI=mongodb://localhost:27017/gastos-microemp
+JWT_SECRET=your-super-secret-jwt-key-change-in-production
+JWT_EXPIRE=7d
+NODE_ENV=development
 ```
 
 **Para MongoDB Atlas:**
@@ -107,7 +75,7 @@ PORT=5000
 MONGODB_URI=mongodb+srv://usuario:senha@cluster.mongodb.net/gastos-microemp
 ```
 
-No diretório `frontend/web`, crie um arquivo `.env` (opcional):
+No diretório `frontend`, crie um arquivo `.env` (opcional):
 
 ```env
 VITE_API_URL=http://localhost:5000/api
@@ -134,7 +102,7 @@ npm run dev
 
 **Terminal 2 - Frontend:**
 ```bash
-cd frontend/web
+cd frontend
 npm run dev
 ```
 
@@ -229,14 +197,13 @@ uni_project/
 │   ├── utils/           # Utilitários (generateToken)
 │   └── server.js        # Arquivo principal do servidor
 ├── frontend/
-│   ├── web/
-│   │   ├──src/
-│   │   │   ├── components/  # Componentes React
-│   │   │   ├── context/     # Context API (AuthContext)
-│   │   │   ├── pages/       # Páginas da aplicação
-│   │   │   ├── App.jsx      # Componente principal
-│   │   │   └── main.jsx     # Entry point
-│   │   └── package.json
+│   ├── src/
+│   │   ├── components/  # Componentes React
+│   │   ├── context/     # Context API (AuthContext)
+│   │   ├── pages/       # Páginas da aplicação
+│   │   ├── App.jsx      # Componente principal
+│   │   └── main.jsx     # Entry point
+│   └── package.json
 └── README.md
 ```
 
@@ -268,7 +235,7 @@ uni_project/
 
 ## 🧪 Testes
 
-Para executar os testes 
+Para executar os testes (quando implementados):
 
 ```bash
 cd backend
@@ -298,9 +265,14 @@ O projeto está pronto para deploy em qualquer plataforma que suporte Docker:
 
 **Backend:**
 - **Render**
+- **Railway**
+- **Heroku**
+- **Vercel** (serverless)
 
 **Frontend:**
-- **Vercel** 
+- **Vercel** (recomendado)
+- **Netlify**
+- **GitHub Pages**
 
 ## 🔒 Segurança
 
@@ -346,3 +318,4 @@ MIT
 ## 👤 Autor
 
 Desenvolvido como projeto universitário.
+
